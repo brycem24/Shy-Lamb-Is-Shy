@@ -1,0 +1,272 @@
+/* GAME WINDOWS */
+#gameWindowID, #prefaceWindowID, #gameOverWindowID {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    margin: -380px 0 0 -400px;
+    width: 800px;
+    height: 800px;
+    border: 4px solid white;
+}
+
+#prefaceWindowID {
+    background-color: black;
+    z-index: 1000;
+}
+
+#gameOverWindowID {
+    background-color: black;
+    z-index: 1000;
+    visibility: hidden;
+}
+
+/* ANIMATIONS */
+@keyframes shadowFadeAnimation {
+    0% {
+        opacity: 0.0;
+    }
+
+    50% {
+        opacity: 0.5;
+        width: 30px;
+    }
+
+    100% {
+        opacity: 0.1;
+        width: 30px;
+    }
+}
+
+@keyframes rainFadeAnimation {
+    0% {
+        opacity: 0.20;
+    }
+ 
+    25% {
+        opacity: 0.25;
+    }
+    50% {
+        opacity: 0.85;
+    }
+
+    75% {
+        opacity: 0.25;
+    }
+
+    100% {
+        opacity: 0.20;
+    }
+}
+
+@keyframes deathAnimation {
+    0% {
+        opacity: 1;
+    }
+
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% { 
+        opacity: 0;
+    }
+}
+
+@keyframes hurtAnimation {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+/* BACKGROUNDS */
+body {
+    background-image: url("images/background.png");
+    background-repeat: repeat;
+}
+
+#moonID {
+    position: absolute;
+    /* offset to put the moon in the center */
+    left: 16px;
+    top: 16px;
+    width: 768px;
+}
+
+#rainID {
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    
+    animation-name: rainFadeAnimation;
+    animation-duration: 120s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+/* UI */
+#gameTitleID {
+    color: white;
+    position: absolute;
+    top: -70px;
+    left: 150px;
+    font-family: "Press Start 2P", cursive;
+}
+
+#prefaceImageID {
+    display: block;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+#prefaceTextID {
+    position: absolute;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    color: white;
+    z-index: 1001;
+    font-size: 24px;
+    font-family: "Press Start 2P", cursive;
+}
+
+#prefaceButtonID {
+    position: relative;
+    top: 320px;
+    left: 200px;
+    width: 250px;
+    height: 60px;
+    color: white;
+    background: none;
+    border: none;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 24px;
+    /* Make sure the form input is a certain width/height */
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    z-index: 1002;
+}
+
+
+#prefaceButtonID:hover {
+    color: red;
+}
+
+#gameOverTextID {
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 150px;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 48px;
+    color: red;
+}
+
+#gameOverQuoteID {
+    position: absolute;
+    margin-left: 110px;
+    margin-right: 110px;
+    margin-top: 300px;
+    margin-bottom: 100px;
+    color: white;
+    z-index: 1001;
+    font-size: 24px;
+    font-family: "Press Start 2P", cursive;
+}
+
+.emphasisClass {
+    color: red;
+    font-family: "Press Start 2P", cursive;
+    font-size: 28px;
+}
+
+/* GAME ENTITIES */
+#pugID {
+    position: absolute;
+    width: 150px;
+    left: 300px;
+    top: 300px;
+    z-index: 1;
+}
+
+.lambClass {
+    position: absolute;
+    width: 120px;
+    left: 200px;
+    top: 150px;
+    z-index: 1;
+}
+
+
+/* MISCELLANEOUS */
+.flippedClass {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+.deathClass {
+    animation-name: deathAnimation;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+.hurtClass {
+    animation-name: hurtAnimation;
+    animation-duration: 0.6s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+
+}
+
+.shadowClass {
+    position: absolute;
+    top: 500px;
+    left: 250px;
+    width: 20px;
+    opacity: 0.25;
+    z-index: 998;
+
+    animation-name: shadowFadeAnimation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}

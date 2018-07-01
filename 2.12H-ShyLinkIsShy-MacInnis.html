@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <title>drapak.ca - Shy Link is Shy</title>
+	    <meta name="description" content="Assignment: Use Javascript mouse events, animation, and function pipelines">
+	    <meta name="author" content="Bryce MacInnis">
+	    <!--
+				Change log:
+					Created:	12. Oct 2015
+					Modified:	3. April 2017	- moved script to bottom of page
+								12. April 2017	- added long line ruler
+								1. April 2018	- sprites added.
+					Submitted: 	16. April 2018
+			-->
+	    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+	    <link href="2.12H-ShyLinkIsShy-MacInnis.css" rel="stylesheet">
+	</head>
+	<body>
+		
+	    <div id="gameWindowID">
+	        <h1 id="gameTitleID">Shy Sheep Is Shy</h1>
+	        <img id="moonID" alt="Moon" src="images/moon.png">
+	        <img id="pugID" alt="Pug" class="pugClass" src="images/pug.png">
+	        <img id="lamb1ID" class="lambClass" alt="Lamb" src="images/lamb.png">
+	        <img id="lamb2ID" class="lambClass" alt="Lamb" src="images/lamb.png">
+	        <img id="lamb3ID" class="lambClass" alt="Lamb" src="images/lamb.png">
+	        <img id="lamb4ID" class="lambClass" alt="Lamb" src="images/lamb.png">
+	        <img id="lamb5ID" class="lambClass" alt="Lamb" src="images/lamb.png">
+	       	<img id="rainID" src="images/rain.gif">
+	        <section id="rainDropsID"></section>
+	    </div>
+	    <div id="prefaceWindowID">
+	    	<img id="prefaceImageID" src="images/earth.png">
+	        <p id="prefaceTextID">
+	        	A long time ago...
+	        	The <span class="emphasisClass">Soviets</span> sent dogs into space.
+	        	To discover beautiful new worlds and advance technology.
+	        	None were seen again...
+	        </p>
+	        <button id="prefaceButtonID">Next...</button>
+	    </div>
+	    <div id="gameOverWindowID">
+	    	<h1 id="gameOverTextID">Game Over...</h1>
+	    	<p id="gameOverQuoteID">ERROR: Quote was never generated</p>
+	    </div>
+		<audio id="rainAudioID" controls hidden autoplay loop>
+	    <source src="audio/rain.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+		</audio>
+		<audio id="musicID" controls hidden autoplay loop>
+	    <source src="audio/sleepyhead.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+		</audio>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	    <script src="2.12H-Vector2-MacInnis.js"></script>
+	    <script src="2.12H-Rendering-MacInnis.js"></script>
+	    <script src="2.12H-Boundaries-MacInnis.js"></script>
+	    <script src="2.12H-Input-MacInnis.js"></script>
+	   	<script src="2.12H-Entity-MacInnis.js"></script>
+	    <script src="2.12H-Player-MacInnis.js"></script>
+	    <script src="2.12H-Rain-MacInnis.js"></script>
+	    <script src="2.12H-Animations-MacInnis.js"></script>
+	    <script src="2.12H-Scenes-MacInnis.js"></script>
+	    <script src="2.12H-ShyLinkIsShy-MacInnis.js"></script>
+	</body>
+</html>
